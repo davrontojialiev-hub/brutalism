@@ -68,7 +68,9 @@
 .banner__title {
   font-family: var(--ff);
   font-weight: 300;
-  font-size: 64px;
+  font-size: clamp(1.875rem, 1.046rem + 4.15vw, 4rem);
+  line-height: 90%;
+  color: var(--white);
 }
 
 .banner__content-desc {
@@ -84,4 +86,60 @@
   line-height: 140%;
   color: var(--gray);
   max-width: 350px;
+  width: 100%;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient:vertical ;
+  overflow: hidden;
+   word-break: break-all;
+  }
+
+@media screen and (max-width: 992px) {
+  .header__wrap{
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+  }
+  .header__nav-list{
+    order: 10;
+  }
 }
+
+@media screen and (max-width: 768px) {
+  .header{
+    height: auto;
+  }
+  .header__nav{
+    background: var(--bg);
+  }
+  .header__wrap{
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+
+  }
+  .header__nav-list{
+    order: unset;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .banner{
+    height: 100svh;
+  }
+}
+
+@media screen and (max-width: 567px) {
+  .banner__content{
+    max-width: none;
+    align-items: center;
+  }
+  .banner__title{
+    text-align: center;
+    line-height: 110%;
+  }
+  .banner__content-desc{
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
