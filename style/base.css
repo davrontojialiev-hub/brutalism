@@ -22,6 +22,9 @@ body{
   background: var(--bg);
   color: var(--white);
 }
+button{
+  background: transparent;
+}
 
 .container {
   max-width: 1140px;
@@ -29,4 +32,20 @@ body{
   height: 100%;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+.subTitle{
+  font-family: var(--ff);
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 90%;
+  color: var(--white);
+}
+
+.title{
+ font-family: var(--ff);
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 90%;
+  color: var(--white);
 }
